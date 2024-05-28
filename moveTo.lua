@@ -1,18 +1,5 @@
 require "move"
 
-local function rotateToDirection(cr,fr)
-    local rotationAmount =  f_ry - c_ry
-    if rotationAmount > 0 then
-        for i = 1, rotationAmount, 1 do
-            turtle.turnRight(i) 
-        end
-    elseif rotationAmount <0 then 
-        for i = 1, rotationAmount, 1 do
-            turtle.turnLeft(i) 
-        end
-    end
-end
-
 -- y = korkeus, z = eteenpäin, x = sivulle
 
 -- 1 forward
@@ -57,5 +44,3 @@ function moveTo(d, c_x,c_y,c_z, f_x, f_y, f_z)
     end
 
 end
-
-
