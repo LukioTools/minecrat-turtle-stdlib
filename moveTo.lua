@@ -29,25 +29,20 @@ function moveTo(fpos, pos, d)
     local rel_y = fpos[2]-pos[2]
     local rel_z = fpos[3]-pos[3]
     
-    
+    print("rotation: ", d)
+
     -- forward
-    if d == 1 then
-        print("relative positions: ")
-        print(rel_x, rel_y, rel_z)
+    if d == 1 then 
         Forward(rel_z)
         Upward(rel_y)
-        print(rel_x)
-        print(rel_x ~= 0)
         if rel_x ~= 0 then
-            print(rel_x)
+            print(GetDirection())
             SetRotation(2)
+            print(GetDirection())
             Forward(rel_x)     
         end
-      
-
     -- right
     elseif d == 2 then
-        print("right")
         Forward(rel_x)
         Upward(rel_y)
         if rel_z ~= 0 then
@@ -58,7 +53,6 @@ function moveTo(fpos, pos, d)
 
     -- backward
     elseif d == 3 then
-        print("backward")
         Forward(-rel_z)
         Upward(rel_y)
         if rel_x ~= 0 then
@@ -67,7 +61,6 @@ function moveTo(fpos, pos, d)
         end
     --left
     elseif d == 4 then
-        print("left")
         Forward(-rel_x)
         Upward(rel_y)
         if rel_z ~= 0 then
