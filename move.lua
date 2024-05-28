@@ -4,36 +4,155 @@ local y = 0;
 local z = 0;
 
 
+-- 1 - 4
+local dir = 1;
+
+function DirectionName(d)
+    if(d == nil)then
+        d = dir;
+    end
+    -- forward
+    if d == 1 then
+        return "Forward"
+    -- right
+    elseif d == 2 then
+        return "Right"
+    -- backward
+    elseif d == 3 then
+        return "Backward"
+    --left
+    elseif d == 4 then
+        return "Left"
+    end
+
+    return "Unknown"
+end
+
+--nill safe and 0 doesnt move
+
 function Forward(n)
+    if n == 0 then return 0; end
+    if n < 0 then return Backward(-n); end
+    local to_move = n;
+
     if n == nil then
         n = 1;
     end
-    return turtle.forward();
+
+    while n ~= 0 do
+        local b = turtle.forward();
+    
+        if b == false then
+            return to_move - n;
+        end;
+
+        -- forward
+        if dir == 1 then
+            z = z + 1;
+        -- backward
+        elseif dir == 3 then
+            z = z - 1;
+        -- right
+        elseif dir == 2 then
+            x = x + 1;
+        --left
+        elseif dir == 4 then
+            x = x - 1;
+        end
+
+        n = n-1;
+    end
+
+    return 0;
 end
 
 function Backward(n)
+    if n == 0 then return 0; end
+    if n < 0 then return Forward(-n); end
+    local to_move = n;
+
     if n == nil then
         n = 1;
     end
-    return turtle.back();
+
+    while n ~= 0 do
+        local b = turtle.back();
+    
+        if b == false then
+            return to_move - n;
+        end;
+
+        -- forward
+        if dir == 1 then
+            z = z - 1;
+        -- backward
+        elseif dir == 3 then
+            z = z + 1;
+        -- right
+        elseif dir == 2 then
+            x = x - 1;
+        --left
+        elseif dir == 4 then
+            x = x + 1;
+        end
+
+        n = n-1;
+    end
+
+    return 0;
 end
 
 function Upward(n)
+    if n == 0 then return 0; end
+    if n < 0 then return Downward(-n); end
+
     if n == nil then
         n = 1;
     end
-    return turtle.back();
+    local to_move = n;
+
+    while n ~= 0 do
+        local b = turtle.up();
+        if b==false then
+            return to_move - n;
+        end
+        y = y + 1;
+        n = n-1;
+    end
+    return 0;
 end
 
 function Downward(n)
+    if n == 0 then return 0; end
+    if n < 0 then return Upward(-n); end
+
     if n == nil then
         n = 1;
     end
-    return turtle.back();
+    local to_move = n;
+
+    while n ~= 0 do
+        local b = turtle.down();
+        if b==false then
+            return to_move - n;
+        end
+        y = y -1;
+        
+        n = n-1;
+    end
+
+    return 0;
 end
 
 function SetOrigo()
-    
+    x = 0;
+    y = 0;
+    z = 0;
+    dir = 1;
+end
+
+function Position()
+    return {x,y,z}
 end
 
 
