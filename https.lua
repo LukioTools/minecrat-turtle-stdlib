@@ -1,6 +1,6 @@
  
 function GetHTTP( sUrl )
-    -- write( "Connecting to " .. sUrl .. "... " )
+    write( "Connecting to " .. sUrl .. "... " )
     local ok, err = http.checkURL( sUrl )
     if not ok then
         print( "Failed." )
@@ -16,7 +16,7 @@ function GetHTTP( sUrl )
         return nil
     end
 
-    -- print( "Success." )
+    print( "Success." )
 
     local sResponse = response.readAll()
     response.close()
