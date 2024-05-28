@@ -2,23 +2,23 @@ require "https"
 
 local urls = {
     {
-        url="http://83.245.166.243/move.lua",
+        url="http://0.0.0.0/move.lua",
         filename="move.lua"
     },
     {
-        url="http://83.245.166.243/moveTo.lua",
+        url="http://0.0.0.0/moveTo.lua",
         filename="moveTo.lua"
     },
     {
-        url="http://83.245.166.243/stdlib.lua",
+        url="http://0.0.0.0/stdlib.lua",
         filename="stdlib.lua"
     },
     {
-        url="http://83.245.166.243/update.lua",
+        url="http://0.0.0.0/update.lua",
         filename="update.lua"
     },
     {
-        url="http://83.245.166.243/inspect.lua",
+        url="http://0.0.0.0/inspect.lua",
         filename="inspect.lua"
     },
 }
