@@ -170,12 +170,37 @@ function Rotate(n)
     end
 
 end
+local function abs(n)
+    if n < 0 then
+        return -n;
+    end
+    return n;
+end
+
+function GetRotation()
+    return dir;
+end
+function GetDirection()
+    return dir;
+end
+
 function SetRotation(d)
     if d < 1 or d > 4 then return 0 end
     if d==nil then
         d = 1;
     end
-    return Rotate(dir-d);
+    local diff = dir-d;
+    if diff == 0 then
+        return 0
+    end
+    
+    if abs(diff) == 3 then
+        if diff < 0 then
+            return Rotate(1);
+        end
+        return Rotate(-1);
+    end
+    return Rotate(diff)
 end
 
 function SetOrigo()
