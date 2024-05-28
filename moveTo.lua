@@ -9,7 +9,16 @@ require "move"
 
 -- global positions
 --current rotation, current pos (x,y,z), future position (x,y,z)
-function moveTo(d, pos, fpos)
+function moveTo(fpos, pos, d)
+    if fpos == nil then
+        fpos = {0,0,0}
+    end
+    if pos == nil then
+        pos = Position()
+    end
+    if d == nil then
+        d = Position()
+    end
     local rel_x = fpos[1]-pos[1]
     local rel_z = fpos[2]-pos[2]
     local rel_y = fpos[3]-pos[3]
