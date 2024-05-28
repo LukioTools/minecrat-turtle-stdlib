@@ -9,7 +9,7 @@ function Inspect()
         Data.name = d.name
         Data.state = d.state     
     end
-    return temp
+    return isInspectable, Data
 end
 
 function InspectUp()
@@ -23,7 +23,7 @@ function InspectUp()
         Data.name = d.name
         Data.state = d.state     
     end
-    return temp
+    return isInspectable, Data
 end
 
 function InspectDown()
@@ -37,5 +37,5 @@ function InspectDown()
         Data.name = d.name
         Data.state = d.state     
     end
-    return temp
+    return isInspectable, Data
 end
