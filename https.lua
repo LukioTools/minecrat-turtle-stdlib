@@ -25,7 +25,9 @@ end
  
 function WriteTo(path, data)
     local file = fs.open( path, "wb" )
-    file.write( data )
+    if data then
+        file.write( data )
+    end
     file.close()
     return true;
 end
