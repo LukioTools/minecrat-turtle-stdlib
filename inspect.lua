@@ -1,24 +1,24 @@
-function inspect()
-    tp = turtle.inspect()
-    temp = {}
+function Inspect()
+    local tp = turtle.inspect()
+    local temp = {}
     temp.metadata = tp.metadata
     temp.name = tp.name
     temp.state = tp.state
     return temp
 end
 
-function inspectUp()
-    tp = turtle.inspectUp()
-    temp = {}
+function InspectUp()
+    local tp = turtle.inspectUp()
+    local temp = {}
     temp.metadata = tp.metadata
     temp.name = tp.name
     temp.state = tp.state
     return temp
 end
 
-function inspectDown()
-    tp = turtle.inspectDown()
-    temp = {}
+function InspectDown()
+    local tp = turtle.inspectDown()
+    local temp = {}
     temp.metadata = tp.metadata
     temp.name = tp.name
     temp.state = tp.state
