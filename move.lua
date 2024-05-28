@@ -184,9 +184,7 @@ function SetRotation(d)
     if d < 1 or d > 4 then return 0 end
     if d == dir then return 0 end;
 
-    while dir ~= d do
-        Rotate(1);
-    end
+    while dir ~= d and Rotate(1) do end
 end
 
 function SetRotation2(d)
