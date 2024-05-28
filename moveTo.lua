@@ -19,6 +19,9 @@ function moveTo(fpos, pos, d)
     if d == nil then
         d = Position()
     end
+    print(fpos)
+    print(pos)
+    print(d)
     local rel_x = fpos[1]-pos[1]
     local rel_z = fpos[2]-pos[2]
     local rel_y = fpos[3]-pos[3]
