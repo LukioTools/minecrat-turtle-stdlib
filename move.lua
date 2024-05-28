@@ -182,18 +182,7 @@ function SetRotation(d)
     if d==nil then
         d = 1;
     end
-    local diff = dir-d;
-    if diff == 0 then
-        return 0
-    end
-    
-    if abs(diff) == 3 then
-        if diff < 0 then
-            return Rotate(1);
-        end
-        return Rotate(-1);
-    end
-    return Rotate(diff)
+    return Rotate(dir-d)
 end
 
 function SetOrigo()
