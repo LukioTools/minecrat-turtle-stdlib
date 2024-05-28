@@ -33,7 +33,8 @@ function moveTo(fpos, pos, d)
     
     -- forward
     if d == 1 then
-        print("forward")
+        print("relative positions: ")
+        print(rel_x, rel_y, rel_z)
         Forward(rel_z)
         Upward(rel_y)
         print(rel_x)
