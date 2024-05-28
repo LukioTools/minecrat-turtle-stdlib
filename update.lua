@@ -10,7 +10,7 @@ local urls = {
         filename="moveTo.lua"
     },
     {
-        "https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/stdlib.lua",
+        url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/stdlib.lua",
         filename="stdlib.lua"
     },
     -- "https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/https.lua",

@@ -24,8 +24,8 @@ function GetHTTP( sUrl )
 end
  
 function WriteTo(path, data)
-    local file = fs.open( sPath, "wb" )
-    file.write( res )
+    local file = fs.open( path, "wb" )
+    file.write( data )
     file.close()
     return true;
 end
