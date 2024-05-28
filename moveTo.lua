@@ -11,7 +11,6 @@ require "move"
 --current rotation, current pos (x,y,z), future position (x,y,z)
 
 function moveTo(fpos, pos, d)
-    SetRotation(1)
     if pos == nil then
         pos = Position()
     end
