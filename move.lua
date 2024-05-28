@@ -175,8 +175,7 @@ function SetRotation(d)
     if d==nil then
         d = 1;
     end
-
-
+    return Rotate(dir-d);
 end
 
 function SetOrigo()
