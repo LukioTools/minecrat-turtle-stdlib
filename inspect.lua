@@ -1,7 +1,7 @@
 function Inspect()
     local tp = turtle.inspect()
     local temp = {false, {metadata = 0, name = "", state = {}}}
-    print(temp[1])
+    print(tp)
     if tp[1] == "true" then
         temp[1] = true;
         temp[2].metadata = tp.metadata
