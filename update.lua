@@ -13,8 +13,10 @@ local urls = {
         url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/stdlib.lua",
         filename="stdlib.lua"
     },
-
-    -- "https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/https.lua",
+    {
+        url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/https.lua",
+        filename="update.lua"
+    },
 }
 
 for index, value in ipairs(urls) do
