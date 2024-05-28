@@ -178,11 +178,23 @@ function GetDirection()
 end
 
 function SetRotation(d)
-    if d < 1 or d > 4 then return 0 end
     if d==nil then
         d = 1;
     end
-    return Rotate(dir-d)
+    if d < 1 or d > 4 then return 0 end
+    if d == dir then return 0 end;
+
+    local geq = d > dir;
+    local rdir = 1
+    local min = d;
+    local max = dir;
+    if geq then
+        max = d;
+        min = d;
+        rdir = -1;
+    end
+
+    return Rotate((min-max)*rdir)
 end
 
 function SetOrigo()
