@@ -17,5 +17,6 @@ local urls = {
 }
 
 for index, value in ipairs(urls) do
+    print("filename: " .. value.filename .. ", url: ".. value.url);
     WriteTo(value.url, GetHTTP(value.url));
 end
