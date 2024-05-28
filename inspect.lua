@@ -13,7 +13,7 @@ function Inspect()
 end
 
 function InspectUp()
-    local i, d = turtle.inspect()
+    local i, d = turtle.inspectUp()
     local isInspectable = false
     local Data = {metadata = 0, name = "minecraft:air", state = {}}
     
@@ -27,7 +27,7 @@ function InspectUp()
 end
 
 function InspectDown()
-    local i, d = turtle.inspect()
+    local i, d = turtle.inspectDown()
     local isInspectable = false
     local Data = {metadata = 0, name = "minecraft:air", state = {}}
     
