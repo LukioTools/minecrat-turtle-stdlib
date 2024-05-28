@@ -15,7 +15,7 @@ function Inspect()
     return temp
 end
 
-function Inspect()
+function InspectUp()
     local tp = turtle.inspectUp()
     local temp = {false, {metadata = 0, name = "", state = {}}}
     if tp[1] then
@@ -31,7 +31,7 @@ function Inspect()
     return temp
 end
 
-function Inspect()
+function InspectDown()
     local tp = turtle.inspectDown()
     local temp = {false, {metadata = 0, name = "", state = {}}}
     if tp[1] then
