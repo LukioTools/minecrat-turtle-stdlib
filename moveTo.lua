@@ -10,15 +10,18 @@ require "move"
 -- global positions
 --current rotation, current pos (x,y,z), future position (x,y,z)
 function moveTo(fpos, pos, d)
-    if fpos == nil then
-        fpos = {0,0,0}
-    end
     if pos == nil then
         pos = Position()
     end
     if d == nil then
         d = GetDirection()
     end
+
+    if fpos == nil then
+        fpos = {0,0,0}
+        d = 1
+    end
+
     print(fpos[1],fpos[2], fpos[3])
     print(pos[1],pos[2],pos[3])
     print(d)
