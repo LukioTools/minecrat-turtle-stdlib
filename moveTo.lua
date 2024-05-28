@@ -17,10 +17,10 @@ function moveTo(fpos, pos, d)
         pos = Position()
     end
     if d == nil then
-        d = Position()
+        d = GetDirection()
     end
-    print(fpos)
-    print(pos)
+    print(fpos[1],fpos[2], fpos[3])
+    print(pos[1],pos[2],pos[3])
     print(d)
     local rel_x = fpos[1]-pos[1]
     local rel_y = fpos[2]-pos[2]
