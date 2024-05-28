@@ -2,7 +2,7 @@ function Inspect()
     local tp = turtle.inspect()
     local temp = {false, {metadata = 0, name = "", state = {}}}
     print(temp[1])
-    if tp[1] then
+    if tp[1] == "true" then
         temp[1] = true;
         temp[2].metadata = tp.metadata
         temp[3].name = tp.name
@@ -18,7 +18,7 @@ end
 function InspectUp()
     local tp = turtle.inspectUp()
     local temp = {false, {metadata = 0, name = "", state = {}}}
-    if tp[1] then
+    if tp[1] == "true" then
         temp[1] = true;
         temp[2].metadata = tp.metadata
         temp[3].name = tp.name
@@ -34,7 +34,7 @@ end
 function InspectDown()
     local tp = turtle.inspectDown()
     local temp = {false, {metadata = 0, name = "", state = {}}}
-    if tp[1] then
+    if tp[1] == "true" then
         temp[1] = true;
         temp[2].metadata = tp.metadata
         temp[3].name = tp.name
