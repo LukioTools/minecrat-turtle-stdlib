@@ -19,7 +19,7 @@ local urls = {
     },
     {
         url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/inspect.lua",
-        filename="update.lua"
+        filename="inspect.lua"
     },
 }
 
