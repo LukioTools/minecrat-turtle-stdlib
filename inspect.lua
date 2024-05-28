@@ -5,9 +5,9 @@ function Inspect()
     
     if i == true then
         isInspectable = true;
-        Data.metadata = tp.metadata
-        Data.name = tp.name
-        Data.state = tp.state     
+        Data.metadata = d.metadata
+        Data.name = d.name
+        Data.state = d.state     
     end
     return temp
 end
@@ -19,9 +19,9 @@ function InspectUp()
     
     if i == true then
         isInspectable = true;
-        Data.metadata = tp.metadata
-        Data.name = tp.name
-        Data.state = tp.state     
+        Data.metadata = d.metadata
+        Data.name = d.name
+        Data.state = d.state     
     end
     return temp
 end
@@ -33,9 +33,9 @@ function InspectDown()
     
     if i == true then
         isInspectable = true;
-        Data.metadata = tp.metadata
-        Data.name = tp.name
-        Data.state = tp.state     
+        Data.metadata = d.metadata
+        Data.name = d.name
+        Data.state = d.state     
     end
     return temp
 end
