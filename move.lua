@@ -1,4 +1,3 @@
-
 local x = 0;
 local y = 0;
 local z = 0;
@@ -41,7 +40,7 @@ function Forward(n)
 
     while n ~= 0 do
         local b = turtle.forward();
-    
+
         if b == false then
             return to_move - n;
         end;
@@ -77,7 +76,7 @@ function Backward(n)
 
     while n ~= 0 do
         local b = turtle.back();
-    
+
         if b == false then
             return to_move - n;
         end;
@@ -132,16 +131,52 @@ function Downward(n)
     local to_move = n;
 
     while n ~= 0 do
-        local b = turtle.down();
-        if b==false then
+        if turtle.down()==false then
             return to_move - n;
         end
         y = y -1;
-        
+
         n = n-1;
     end
 
     return 0;
+end
+
+function Rotate(n)
+    if n==0 or n == nil then return 0 end
+    local to_move = n;
+
+    if n > 0 then
+        while n ~= 0 do
+            if turtle.turnRight() == false then
+                return to_move-n;
+            end
+            dir = dir+1;
+            if dir > 4 then
+                dir = 1;
+            end
+            n=n-1;
+        end
+    else
+        while n~=0 do
+            if turtle.turnLeft() == false then
+                return n-to_move;
+            end
+            if dir < 1 then
+                dir = 4;
+            end
+            n=n+1;
+        end
+    end
+
+end
+function SetRotation(d)
+    if d < 1 or d > 4 then return 0 end
+    if d==nil then
+        d = 1;
+    end
+
+
 end
 
 function SetOrigo()
