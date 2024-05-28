@@ -32,32 +32,41 @@ function moveTo(fpos, pos, d)
         print("forward")
         Forward(rel_z)
         Upward(rel_y)
-        SetRotation(2)
-        Forward(rel_x)        
+        if rel_x ~= 0 then
+            SetRotation(2)
+            Forward(rel_x)     
+        end
+      
 
     -- right
     elseif d == 2 then
         print("right")
         Forward(rel_x)
         Upward(rel_y)
-        SetRotation(1)
-        Forward(rel_z)
+        if rel_z ~= 0 then
+            SetRotation(1)
+            Forward(rel_z)  
+        end
+
 
     -- backward
     elseif d == 3 then
         print("backward")
         Forward(-rel_z)
         Upward(rel_y)
-        SetRotation(2)
-        Forward(rel_x)
-
+        if rel_x ~= 0 then
+            SetRotation(2)
+            Forward(rel_x)
+        end
     --left
     elseif d == 4 then
         print("left")
         Forward(-rel_x)
         Upward(rel_y)
-        SetRotation(1)
-        Forward(rel_z)
+        if rel_z ~= 0 then
+            SetRotation(1)
+            Forward(rel_z)
+        end
     end
 
 end
