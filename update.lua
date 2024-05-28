@@ -2,23 +2,23 @@ require "https"
 
 local urls = {
     {
-        url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/move.lua",
+        url="http://83.245.166.243/move.lua",
         filename="move.lua"
     },
     {
-        url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/moveTo.lua",
+        url="http://83.245.166.243/moveTo.lua",
         filename="moveTo.lua"
     },
     {
-        url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/stdlib.lua",
+        url="http://83.245.166.243/stdlib.lua",
         filename="stdlib.lua"
     },
     {
-        url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/update.lua",
+        url="http://83.245.166.243/update.lua",
         filename="update.lua"
     },
     {
-        url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/inspect.lua",
+        url="http://83.245.166.243/inspect.lua",
         filename="inspect.lua"
     },
 }
