@@ -184,17 +184,31 @@ function SetRotation(d)
     if d < 1 or d > 4 then return 0 end
     if d == dir then return 0 end;
 
-    local geq = d > dir;
-    local rdir = 1
+    while dir ~= d do
+        Rotate(1);
+    end
+end
+
+function SetRotation2(d)
+    if d==nil then
+        d = 1;
+    end
+    if d < 1 or d > 4 then return 0 end
+    if d == dir then return 0 end;
+
     local min = d;
     local max = dir;
-    if geq then
+    local dv = 1;
+    if d > dir then
+        min = dir;
         max = d;
-        min = d;
-        rdir = -1;
+        dv = -1;
     end
+    local diff = max-min;
 
-    return Rotate((min-max)*rdir)
+    print("Diff: ", max-min);
+    print("DirV: ", dv);
+    Rotate((max-min)*dv)
 end
 
 function SetOrigo()
