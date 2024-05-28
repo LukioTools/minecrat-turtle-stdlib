@@ -30,13 +30,11 @@ end
 --nill safe and 0 doesnt move
 
 function Forward(n)
+    if n == nil then n = 1; end
     if n == 0 then return 0; end
     if n < 0 then return Backward(-n); end
     local to_move = n;
 
-    if n == nil then
-        n = 1;
-    end
 
     while n ~= 0 do
         local b = turtle.forward();
@@ -66,13 +64,11 @@ function Forward(n)
 end
 
 function Backward(n)
+    if n == nil then n = 1; end
     if n == 0 then return 0; end
     if n < 0 then return Forward(-n); end
     local to_move = n;
 
-    if n == nil then
-        n = 1;
-    end
 
     while n ~= 0 do
         local b = turtle.back();
@@ -102,12 +98,10 @@ function Backward(n)
 end
 
 function Upward(n)
+    if n == nil then n = 1; end
     if n == 0 then return 0; end
     if n < 0 then return Downward(-n); end
 
-    if n == nil then
-        n = 1;
-    end
     local to_move = n;
 
     while n ~= 0 do
@@ -122,12 +116,10 @@ function Upward(n)
 end
 
 function Downward(n)
+    if n == nil then n = 1; end
     if n == 0 then return 0; end
     if n < 0 then return Upward(-n); end
 
-    if n == nil then
-        n = 1;
-    end
     local to_move = n;
 
     while n ~= 0 do
@@ -143,7 +135,7 @@ function Downward(n)
 end
 
 function Rotate(n)
-    if n==0 or n == nil then return 0 end
+    if n == nil or n==0 then return 0 end
     local to_move = n;
 
     if n > 0 then
@@ -162,6 +154,7 @@ function Rotate(n)
             if turtle.turnLeft() == false then
                 return n-to_move;
             end
+            dir = dir-1;
             if dir < 1 then
                 dir = 4;
             end
