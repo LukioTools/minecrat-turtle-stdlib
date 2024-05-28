@@ -9,13 +9,14 @@ require "move"
 
 -- global positions
 --current rotation, current pos (x,y,z), future position (x,y,z)
-function moveTo(d, c_x,c_y,c_z, f_x, f_y, f_z)
-    local rel_x = f_x-c_x
-    local rel_z = f_z-c_z
-    local rel_y = f_y-c_y
+function moveTo(d, pos, fpos)
+    local rel_x = fpos[1]-pos[1]
+    local rel_z = fpos[2]-pos[2]
+    local rel_y = fpos[3]-pos[3]
     
     -- forward
     if d == 1 then
+        print("forward")
         Forward(rel_z)
         Upward(rel_y)
         SetRotation(2)
@@ -23,6 +24,7 @@ function moveTo(d, c_x,c_y,c_z, f_x, f_y, f_z)
 
     -- right
     elseif d == 2 then
+        print("right")
         Forward(rel_x)
         Upward(rel_y)
         SetRotation(1)
@@ -30,6 +32,7 @@ function moveTo(d, c_x,c_y,c_z, f_x, f_y, f_z)
 
     -- backward
     elseif d == 3 then
+        print("backward")
         Forward(-rel_z)
         Upward(rel_y)
         SetRotation(2)
@@ -37,6 +40,7 @@ function moveTo(d, c_x,c_y,c_z, f_x, f_y, f_z)
 
     --left
     elseif d == 4 then
+        print("left")
         Forward(-rel_x)
         Upward(rel_y)
         SetRotation(1)
