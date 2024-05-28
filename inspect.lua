@@ -1,5 +1,6 @@
 function Inspect()
     local tp = turtle.inspect()
+    print(tp)
     local temp = {}
     temp.metadata = tp.metadata
     temp.name = tp.name
