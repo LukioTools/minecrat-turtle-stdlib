@@ -14,7 +14,7 @@ local urls = {
         filename="stdlib.lua"
     },
     {
-        url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/https.lua",
+        url="https://raw.githubusercontent.com/LukioTools/minecrat-turtle-stdlib/main/update.lua",
         filename="update.lua"
     },
 }
