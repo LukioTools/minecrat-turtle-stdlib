@@ -35,7 +35,10 @@ function moveTo(fpos, pos, d)
         print("forward")
         Forward(rel_z)
         Upward(rel_y)
+        print(rel_x)
+        print(rel_x ~= 0)
         if rel_x ~= 0 then
+            print(rel_x)
             SetRotation(2)
             Forward(rel_x)     
         end
