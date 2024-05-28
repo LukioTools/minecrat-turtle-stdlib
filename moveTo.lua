@@ -1,21 +1,4 @@
-local function Forward(l)
-end
-
-local function Backward(l)
-end
-
-local function Upward(l)
-end
-
-local function Downward(l)
-end
-
-local function Rotate(l)
-end
-
-local function SetRotation(l)
-    
-end
+require "move"
 
 local function rotateToDirection(cr,fr)
     local rotationAmount =  f_ry - c_ry
