@@ -15,9 +15,9 @@ for i = 1, sizeY, 3 do
         moveTo({j,i,0})
         SetRotation(1)
         for k = 0, sizeZ, 1 do
-            Dig("left") 
-            DigUp("left")
-            DigDown("left")
+            Dig("right") 
+            DigUp("right")
+            DigDown("right")
             Forward(1)
         end
         moveTo({j,i,0})
