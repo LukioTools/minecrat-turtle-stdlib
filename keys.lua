@@ -1,0 +1,18 @@
+DEKeys = {
+    ENTER=28,
+    BACKSPACE=14,
+    DEL=211,
+    ESC='§',
+    ARROW_UP=200,
+    ARROW_DOWN=208,
+    ARROW_LEFT=203,
+    ARROW_RIGHT=205,
+    LEFT_SHIFT=42,
+    LEFT_CTRL=29,
+    RIGHT_SHIFT=54,
+    RIGHT_CTRL=157,
+    ALT=56,
+    ALT_GR=184,
+    HOME=199,
+    END=207,
+}
