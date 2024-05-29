@@ -41,8 +41,12 @@ function CompareDown(slot)
 end
 
 function CompareTo(slot, current)
+    local result = false
     if current then
-        
+        SelectSlot(current)
+        result = turtle.compareTo(slot)
+    else
+        result = turtle.compareTo(slot)
     end
 end
 
