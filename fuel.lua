@@ -1,4 +1,4 @@
-function GetRefuelLevel()
+function GetFuelLevel()
     local result = 0
     result = turtle.getFuelLevel()
     return result
