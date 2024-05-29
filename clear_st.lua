@@ -25,16 +25,19 @@ while x < size.x do
         end
         DigUp()
         Upward(1)
-        Rotate(2)
+        Rotate(2) --rotate around to go back and fourth
         y=y+1;
     end
-    SetRotation(3)
+    
     Downward(size.y)
-    Forward(size.z)
-    Rotate(1)
-    Dig()
+    if y%2 == 1 then
+        SetRotation(3)
+        Forward(size.z)
+    end
+    SetRotation(4)
+    Dig()       --clear block in case
     Forward(1)
-    Rotate(1)
+    Rotate(1)   -- goto rotation 1
     x=x+1;
 end
 
