@@ -1,15 +1,15 @@
 -- Breaks the block in front. With hoe: tills the dirt in front of it. 
-function Dig(side)
+function Dig(hand)
     local success = false
-    success = turtle.Dig()
+    success = turtle.Dig(hand)
 end
 
-function DigUp(side)
+function DigUp(hand)
     local success = false
-    success = turtle.DigUp()
+    success = turtle.DigUp(hand)
 end
 
-function DigDown(side)
+function DigDown(hand)
     local success = false
-    success = turtle.DigDown()
+    success = turtle.DigDown(hand)
 end
