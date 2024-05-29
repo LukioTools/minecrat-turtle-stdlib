@@ -17,13 +17,11 @@ local z = 0
 while sizeY > Position()[2] do
     while sizeX > Position()[1] do
         while sizeZ > Position()[3] do
-            if Inspect() then
-                AutoRefuel(16, 1)
-                print(GetRefuelLevel())
-                print("digging")
-                Dig("left")
-                Forward(1)
-            end
+            AutoRefuel(16, 1)
+            print(GetRefuelLevel())
+            print("digging")
+            Dig("left")
+            Forward(1)
         end    
         pos = Position()
         moveTo({pos[1],pos[2], 0})
