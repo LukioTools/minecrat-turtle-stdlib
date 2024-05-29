@@ -33,7 +33,7 @@ local urls = {
     },
     {
         filename="dig.lua"
-    },
+    }
 }
 
 for index, value in ipairs(urls) do
