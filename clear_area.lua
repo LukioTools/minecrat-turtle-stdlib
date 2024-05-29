@@ -10,6 +10,8 @@ local sizeZ = tonumber(Targ[3])
 print(Targ[1], Targ[2], Targ[3])
 print(sizeX, sizeY, sizeZ)
 
+EquipRight()
+
 for i = 1, sizeY, 3 do     
     for j = 0, sizeX, 1 do
         moveTo({j,i,0})
