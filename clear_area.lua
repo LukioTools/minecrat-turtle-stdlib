@@ -21,7 +21,7 @@ for i = 1, sizeY, 3 do
             Forward(1)
         end
         moveTo({j,i,0})
-        if GetFuelLevel < 10 then
+        if GetFuelLevel() < 10 then
             AutoRefuel(16, 10)
         end
     end
