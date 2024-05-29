@@ -199,26 +199,6 @@ function SetRotation(d)
     
 end
 
-function SetRotation2(d)
-    if d==nil then
-        d = 1;
-    end
-    if d < 1 or d > 4 then return 0 end
-    if d == dir then return 0 end;
-
-    local min = d;
-    local max = dir;
-    local dv = 1;
-    if d > dir then
-        min = dir;
-        max = d;
-        dv = -1;
-    end
-    local diff = max-min;
-
-    Rotate((max-min)*dv)
-end
-
 function SetOrigo()
     x = 0;
     y = 0;
