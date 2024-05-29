@@ -3,9 +3,9 @@ require "stdlib"
 
 Targ = {...}
 
-local sizeX = Targ[1]
-local sizeY = Targ[2]
-local sizeZ = Targ[3]
+local sizeX = tonumber(Targ[1])
+local sizeY = tonumber(Targ[2])
+local sizeZ = tonumber(Targ[3])
 
 EquipRight()
 
