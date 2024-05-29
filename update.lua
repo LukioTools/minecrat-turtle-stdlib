@@ -27,7 +27,7 @@ local urls = {
     },
     {
         url="http://0.0.0.0/comparation.lua",
-        filename="comparationg.lua"
+        filename="comparation.lua"
     },
     {
         url="http://0.0.0.0/fuel.lua",
