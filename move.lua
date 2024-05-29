@@ -178,16 +178,6 @@ function GetDirection()
 end
 
 function SetRotation(d)
-    if d==nil then
-        d = 1;
-    end
-    if d < 1 or d > 4 then return 0 end
-    if d == dir then return 0 end;
-
-    while dir ~= d do Rotate(1) end
-end
-
-function setRotation3(d)
     if d == nil then d = 1; end
     if d < 1 or d > 4 then return 0 end
     if d == dir then return 0 end;
