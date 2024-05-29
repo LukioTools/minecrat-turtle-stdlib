@@ -10,26 +10,13 @@ local sizeZ = tonumber(Targ[3])
 print(Targ[1], Targ[2], Targ[3])
 print(sizeX, sizeY, sizeZ)
 
-local x = 0
-local y = 0
-local z = 0
-
-while sizeY > Position()[2] do
-    while sizeX > Position()[1] do
-        while sizeZ > Position()[3] do
-            AutoRefuel(16, 1)
-            print(GetRefuelLevel())
-            print("digging")
-            Dig("left")
+for i = 1, sizeY, 1 do     
+    for i = 1, sizeX, 1 do
+        for i = 1, sizeZ, 1 do
             Forward(1)
-        end    
-        pos = Position()
-        moveTo({pos[1],pos[2], 0})
-        sleep(1)
-        print(pos[1],pos[2], pos[3]+ 1)
-        moveTo({pos[1],pos[2], pos[3]+1})
-        sleep(1)
+            Dig("right")
+            AutoRefuel(16, 1)
+        end
     end
 end
-
 
