@@ -35,6 +35,7 @@ function GetItemSpace(pos)
 end
 
 -- Returns the ID string, count and damage values of currently selected slot or, if specified, slotNum slot 
+-- @param pos number
 function GetItemDetail(pos)
     local detail = {name="minecraft:air", damage=0, count=1}
     if pos ~= nil then
