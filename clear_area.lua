@@ -1,10 +1,15 @@
 require "stdlib"
 
-local sizeX = arg[2]
-local sizeY = arg[3]
-local sizeZ = arg[4]
+
+Targ = {...}
+
+local sizeX = Targ[1]
+local sizeY = Targ[2]
+local sizeZ = Targ[3]
 
 EquipRight()
+
+
 
 while sizeY < Position()[2] do
     while sizeX < Position()[1] do
