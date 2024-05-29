@@ -21,6 +21,10 @@ function moveTo(fpos, pos, d)
         fpos = {0,0,0}
     end
 
+    if fpos == pos then
+        return
+    end
+
     local rel_x = fpos[1]-pos[1]
     local rel_y = fpos[2]-pos[2]
     local rel_z = fpos[3]-pos[3]
