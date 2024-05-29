@@ -35,6 +35,9 @@ local urls = {
         filename="dig.lua"
     },
     {
+        filename="detect.lua"
+    },
+    {
         filename="clear_area.lua"
     }
 }
