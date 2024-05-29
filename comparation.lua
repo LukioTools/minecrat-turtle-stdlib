@@ -48,6 +48,7 @@ function CompareTo(slot, current)
     else
         result = turtle.compareTo(slot)
     end
+    return result
 end
 
 CompareDown()

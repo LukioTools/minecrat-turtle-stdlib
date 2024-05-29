@@ -21,6 +21,14 @@ local urls = {
         url="http://0.0.0.0/inspect.lua",
         filename="inspect.lua"
     },
+    {
+        url="http://0.0.0.0/inventory.lua",
+        filename="inventory.lua"
+    },
+    {
+        url="http://0.0.0.0/comparation.lua",
+        filename="comparation.lua"
+    },
 }
 
 for index, value in ipairs(urls) do
