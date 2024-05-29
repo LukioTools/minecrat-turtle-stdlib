@@ -38,6 +38,9 @@ local urls = {
         filename="detect.lua"
     },
     {
+        filename="equip.lua"
+    },
+    {
         filename="clear_area.lua"
     }
 }
