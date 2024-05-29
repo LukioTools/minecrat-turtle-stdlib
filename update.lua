@@ -35,11 +35,11 @@ local urls = {
     },
     {
         url="http://0.0.0.0/suck.lua",
-        filename="fuel.lua"
+        filename="suck.lua"
     },
     {
         url="http://0.0.0.0/drop.lua",
-        filename="fuel.lua"
+        filename="drop.lua"
     },
 }
 
