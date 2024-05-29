@@ -1,7 +1,6 @@
-require "moveTo"
+require "move"
 require "inventory"
 require "dig"
-require "suck"
 
 local asArgv = { ... }
 if #asArgv ~= 1 then
@@ -12,8 +11,8 @@ end
 local iMaxLenght = tonumber(asArgv[1])
 
 while PositionXYZ().z < iMaxLenght do
-    while turtle.dig() do end
+    while Dig() do end
     Forward(1)
-    while turtle.digUp() do end
+    while Dig() do end
 end
 
