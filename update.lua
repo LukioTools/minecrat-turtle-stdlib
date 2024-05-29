@@ -33,6 +33,9 @@ local urls = {
     },
     {
         filename="dig.lua"
+    },
+    {
+        filename="clear.lua"
     }
 }
 
