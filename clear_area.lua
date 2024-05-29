@@ -24,8 +24,8 @@ while sizeY > Position()[2] do
             end
         end    
         pos = Position()
-        moveTo(pos[1],pos[2], 0)
-        moveTo(pos[1],pos[2], pos[3]+1)
+        moveTo({pos[1],pos[2], 0})
+        moveTo({pos[1],pos[2], pos[3]+1})
     end
 end
 
