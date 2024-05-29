@@ -10,6 +10,9 @@ local sizeZ = tonumber(Targ[3])
 print(Targ[1], Targ[2], Targ[3])
 print(sizeX, sizeY, sizeZ)
 
+if GetItemDetail(GetSelectedSlot()).name == "minecraft:diamond_pickaxe" then
+    EquipRight()
+end
 EquipRight()
 
 for i = 1, sizeY, 3 do     
