@@ -11,7 +11,7 @@ while sizeY < Position()[2] do
     while sizeX < Position()[1] do
         while sizeZ < Position()[3] do
             if Inspect() then
-                Dig("")
+                Dig("left")
                 Forward(1)
             end
         end    
