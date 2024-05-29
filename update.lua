@@ -37,5 +37,5 @@ local urls = {
 }
 
 for index, value in ipairs(urls) do
-    WriteTo(value.filename, GetHTTP("http://0.0.0.0/"+value.filename));
+    WriteTo(value.filename, GetHTTP("http://0.0.0.0/"..value.filename));
 end
