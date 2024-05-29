@@ -33,6 +33,14 @@ local urls = {
         url="http://0.0.0.0/fuel.lua",
         filename="fuel.lua"
     },
+    {
+        url="http://0.0.0.0/suck.lua",
+        filename="fuel.lua"
+    },
+    {
+        url="http://0.0.0.0/drop.lua",
+        filename="fuel.lua"
+    },
 }
 
 for index, value in ipairs(urls) do
