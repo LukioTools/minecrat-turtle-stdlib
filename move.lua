@@ -204,8 +204,6 @@ function SetRotation2(d)
     end
     local diff = max-min;
 
-    print("Diff: ", max-min);
-    print("DirV: ", dv);
     Rotate((max-min)*dv)
 end
 
