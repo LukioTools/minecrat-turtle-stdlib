@@ -7,15 +7,11 @@ local sizeX = tonumber(Targ[1])
 local sizeY = tonumber(Targ[2])
 local sizeZ = tonumber(Targ[3])
 
-EquipRight()
-
-
-
 while sizeY < Position()[2] do
     while sizeX < Position()[1] do
         while sizeZ < Position()[3] do
             if Inspect() then
-                Dig("right")
+                Dig("")
                 Forward(1)
             end
         end    
