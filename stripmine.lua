@@ -12,8 +12,8 @@ end
 local iMaxLenght = tonumber(asArgv[1])
 
 while PositionXYZ().z < iMaxLenght do
-    while Dig() do end
+    while turtle.dig() do end
     Forward(1)
-    while DigUp() do end
+    while turtle.digUp() do end
 end
 
