@@ -6,9 +6,11 @@
         "http",
         "fs",
         "write",
-        "term"
+        "term",
+        "printError"
     ],
     "Lua.diagnostics.disable": [
-        "undefined-field"
+        "undefined-field",
+        "undefined-global"
     ]
 }
