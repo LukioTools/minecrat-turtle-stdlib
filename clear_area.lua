@@ -18,7 +18,7 @@ for i = 1, sizeY, 1 do
             Dig("left")
             AutoRefuel(16, 1)
         end
-        moveTo(i,j,0)
+        moveTo({i,j,0})
     end
 end
 
