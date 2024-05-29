@@ -5,5 +5,5 @@ end
 
 function EquipRight()
     local success = false
-    success = turtle.equipLeft()
+    success = turtle.equipRight()
 end
