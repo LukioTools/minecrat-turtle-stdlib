@@ -14,8 +14,8 @@ for i = 1, sizeY, 1 do
     for j = 1, sizeX, 1 do
         moveTo({i,j,0})
         for k = 1, sizeZ, 1 do
-            Forward(1)
             Dig("left")
+            Forward(1)
             AutoRefuel(16, 1)
         end
         moveTo({i,j,0})
