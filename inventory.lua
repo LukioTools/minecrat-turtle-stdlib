@@ -1,20 +1,20 @@
 -- Make the turtle select slot slotNum (1 is top left, 16 (9 in 1.33 and earlier) is bottom right) 
 function SelectSlot(pos)
-    status = false
+    local status = false
     status = turtle.select(pos)
     return status 
 end
 
 -- Indicates the currently selected inventory slot 
 function GetSelectedSlot()
-    slot = 0
+    local slot = 0
     slot = turtle.GetSelectedSlot()
     return slot
 end
 
 -- Counts how many items are in the currently selected slot or, if specified, slotNum slot w
 function GetItemCount(pos)
-    amount = 0
+    local amount = 0
     if pos ~= nil then
         amount = turtle.getItemCount(pos)
     else
@@ -25,7 +25,7 @@ end
 
 -- Counts how many remaining items you need to fill the stack in the currently selected slot or, if specified, slotNum slot 
 function GetItemSpace(pos)
-    amount = 0
+    local amount = 0
     if pos ~= nil then
         amount = turtle.getItemSpace(pos)
     else
@@ -36,11 +36,23 @@ end
 
 -- Returns the ID string, count and damage values of currently selected slot or, if specified, slotNum slot 
 function GetItemDetail(pos)
-    amount = 0
+    local detail = {name="minecraft:air", damage=0, count=1}
     if pos ~= nil then
-        amount = turtle.getItemDetail(pos)
+        local temp = turtle.getItemDetail(pos)
+        if temp then
+            detail.name = temp.name
+            detail.damage = temp.damage
+            detail.count = temp.count
+            return detail
+        end
     else
-        amount = turtle.getItemDetail()
+        local temp = turtle.getItemDetail()
+        if temp then
+            detail.name = temp.name
+            detail.damage = temp.damage
+            detail.count = temp.count
+            return detail
+        end
     end
-    return amount
+    return detail
 end
