@@ -13,6 +13,7 @@ local iMaxLenght = tonumber(asArgv[1])
 while PositionXYZ().z < iMaxLenght do
     while Dig() do end
     Forward(1)
-    while Dig() do end
+    print(PositionXYZ())
+    while DigUp() do end
 end
 
