@@ -7,6 +7,9 @@ local sizeX = tonumber(Targ[1])
 local sizeY = tonumber(Targ[2])
 local sizeZ = tonumber(Targ[3])
 
+print(Targ[1], Targ[2], Targ[3])
+print(sizeX, sizeY, sizeZ)
+
 while sizeY < Position()[2] do
     while sizeX < Position()[1] do
         while sizeZ < Position()[3] do
