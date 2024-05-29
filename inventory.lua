@@ -8,7 +8,7 @@ end
 -- Indicates the currently selected inventory slot 
 function GetSelectedSlot()
     local slot = 0
-    slot = turtle.GetSelectedSlot()
+    slot = turtle.getSelectedSlot()
     return slot
 end
 
