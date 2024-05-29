@@ -1,3 +1,4 @@
+-- Returns the ID string and metadata of the block in front of the Turtle 
 function Inspect()
     local i, d = turtle.inspect()
     local isInspectable = false
@@ -12,6 +13,7 @@ function Inspect()
     return isInspectable, Data
 end
 
+-- Returns the ID string and metadata of the block above the Turtle
 function InspectUp()
     local i, d = turtle.inspectUp()
     local isInspectable = false
@@ -26,6 +28,7 @@ function InspectUp()
     return isInspectable, Data
 end
 
+-- Returns the ID string and metadata of the block below the Turtle 
 function InspectDown()
     local i, d = turtle.inspectDown()
     local isInspectable = false
