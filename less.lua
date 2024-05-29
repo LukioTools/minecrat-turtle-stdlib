@@ -1,32 +1,30 @@
-local tArgs = { ... }
-if #tArgs ~= 1 then
+local asArgv = { ... }
+if #asArgv ~= 1 then
     print("Usage: <filename>")
     return
 end
 
-local function ReadLines(filename)
-    local lines = {}
-    local file = fs.open(filename, "r");
-    if not file then
-        return
-    end
+local function ReadLines(sFilename) --array<string>
+    local asLines = {}
+    local oFile = fs.open(sFilename, "r");
+    if not oFile then return asLines end
     while true do
-        local line = file.readLine()
-        if not line then
+        local sLine = oFile.readLine()
+        if not sLine then
             break
         end
-        lines[#lines+1] = line
+        asLines[#asLines+1] = sLine
     end
-    return lines;
+    return asLines;
 end
 
 
-local asLines = ReadLines(tArgs[1]);
+local asLines = ReadLines(asArgv[1]);
 local iScrollIndex = 0;
 local iXOffsetIndex = 0;
 local iX, iY = term.getSize();
 iY = iY -1;
-local function display()
+local function display() -- nil
     term.clear();
     if not asLines then
         return -1
@@ -44,12 +42,6 @@ local function display()
         end
 
         write(ln);
-        --if iXOffsetIndex == 0 then
-        --    write(string.sub(line, 1, iX)..'\n');
-        --else
-        --    write("<"..string.sub(line, 1+iXOffsetIndex, iX+iXOffsetIndex-1)..'\n');
-        --end
-
         iPos = iPos+1
     end
 end
@@ -58,23 +50,23 @@ end
 display();
 
 while true do
-    local kt, key, key_hold = os.pullEvent();
-    if key == '§' or key == 'q' then
+    local siKt, siKey, bKey_Hold = os.pullEvent();
+    if siKey == '§' or siKey == 'q' then
         break
     end
     --up
-    if key == 200 and iScrollIndex > 0 then
+    if siKey == 200 and iScrollIndex > 0 then
         iScrollIndex = iScrollIndex -1;
     --down
-    elseif key == 208 and iScrollIndex+iY < #asLines then
+    elseif siKey == 208 and iScrollIndex+iY < #asLines then
         iScrollIndex = iScrollIndex +1;
 
     
     --left
-    elseif key == 203 and iXOffsetIndex > 0 then
+    elseif siKey == 203 and iXOffsetIndex > 0 then
         iXOffsetIndex = iXOffsetIndex -1;
     --right
-    elseif key == 205 then
+    elseif siKey == 205 then
         iXOffsetIndex = iXOffsetIndex +1;
     end
     display();
