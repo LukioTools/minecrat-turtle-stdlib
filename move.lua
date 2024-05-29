@@ -187,6 +187,28 @@ function SetRotation(d)
     while dir ~= d do Rotate(1) end
 end
 
+function setRotation3(d)
+    if d == nil then d = 1; end
+    if d < 1 or d > 4 then return 0 end
+    if d == dir then return 0 end;
+
+    a = dir - 1
+    b = d - 1
+
+    -- Calculate the clockwise distance
+    local clockwise = (b - a) % 4
+
+    -- Calculate the counterclockwise distance
+    local counterclockwise = (a - b) % 4
+
+    if clockwise <= counterclockwise then
+        Rotate(clockwise)
+    else
+        Rotate(-counterclockwise)
+    end
+    
+end
+
 function SetRotation2(d)
     if d==nil then
         d = 1;
