@@ -14,7 +14,7 @@ for i = 1, sizeY, 1 do
     for i = 1, sizeX, 1 do
         for i = 1, sizeZ, 1 do
             Forward(1)
-            Dig("")
+            Dig("left")
             AutoRefuel(16, 1)
         end
     end
