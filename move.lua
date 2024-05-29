@@ -220,4 +220,8 @@ function Position()
     return {x,y,z}
 end
 
+function PositionXYZ()
+    return {x=x,y=y,z=z}
+end
+
 
