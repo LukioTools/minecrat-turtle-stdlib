@@ -1,6 +1,7 @@
 require "moveTo"
 require "inventory"
 require "dig"
+require "suck"
 
 local asArgv = { ... }
 if #asArgv ~= 1 then
@@ -12,9 +13,9 @@ local iMaxLenght = tonumber(asArgv[1])
 
 
 while PositionXYZ().z < iMaxLenght do
-    Dig()
+    while Dig() do end
     Forward(1)
-    DigUp()
+    while DigUp() do end
 end
 
 
