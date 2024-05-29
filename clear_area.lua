@@ -15,9 +15,7 @@ for i = 0, sizeY, 1 do
         moveTo({j,i,0})
         SetRotation(1)
         for k = 0, sizeZ, 1 do
-            if Inspect then
-                Dig("left") 
-            end
+            Dig("left") 
             Forward(1)
             AutoRefuel(16, 1)
         end
