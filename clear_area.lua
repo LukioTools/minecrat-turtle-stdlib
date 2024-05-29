@@ -18,6 +18,7 @@ while sizeY > Position()[2] do
     while sizeX > Position()[1] do
         while sizeZ > Position()[3] do
             if Inspect() then
+                AutoRefuel(16, 1)
                 print("digging")
                 Dig("left")
                 Forward(1)
