@@ -3,6 +3,12 @@
         "origo",
         "turtle",
         "moveFwd",
-        "http"
+        "http",
+        "fs",
+        "write",
+        "term"
+    ],
+    "Lua.diagnostics.disable": [
+        "undefined-field"
     ]
 }
