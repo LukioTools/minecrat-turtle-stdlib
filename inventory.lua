@@ -1,7 +1,7 @@
 -- Make the turtle select slot slotNum (1 is top left, 16 (9 in 1.33 and earlier) is bottom right) 
-function SelectSlot(pos)
+function SelectSlot(slot)
     local status = false
-    status = turtle.select(pos)
+    status = turtle.select(slot)
     return status 
 end
 
@@ -13,10 +13,10 @@ function GetSelectedSlot()
 end
 
 -- Counts how many items are in the currently selected slot or, if specified, slotNum slot w
-function GetItemCount(pos)
+function GetItemCount(slot)
     local amount = 0
-    if pos ~= nil then
-        amount = turtle.getItemCount(pos)
+    if slot ~= nil then
+        amount = turtle.getItemCount(slot)
     else
         amount = turtle.getSelectedSlot()
     end
@@ -24,10 +24,10 @@ function GetItemCount(pos)
 end
 
 -- Counts how many remaining items you need to fill the stack in the currently selected slot or, if specified, slotNum slot 
-function GetItemSpace(pos)
+function GetItemSpace(slot)
     local amount = 0
-    if pos ~= nil then
-        amount = turtle.getItemSpace(pos)
+    if slot ~= nil then
+        amount = turtle.getItemSpace(slot)
     else
         amount = turtle.getItemSpace()
     end
@@ -35,11 +35,11 @@ function GetItemSpace(pos)
 end
 
 -- Returns the ID string, count and damage values of currently selected slot or, if specified, slotNum slot 
--- @param pos number
-function GetItemDetail(pos)
+-- @param slot number
+function GetItemDetail(slot)
     local detail = {name="minecraft:air", damage=0, count=1}
-    if pos ~= nil then
-        local temp = turtle.getItemDetail(pos)
+    if slot ~= nil then
+        local temp = turtle.getItemDetail(slot)
         if temp then
             detail.name = temp.name
             detail.damage = temp.damage
@@ -57,3 +57,4 @@ function GetItemDetail(pos)
     end
     return detail
 end
+
