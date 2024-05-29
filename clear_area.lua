@@ -13,7 +13,6 @@ print(sizeX, sizeY, sizeZ)
 if GetItemDetail(GetSelectedSlot()).name == "minecraft:diamond_pickaxe" then
     EquipRight()
 end
-EquipRight()
 
 for i = 1, sizeY, 3 do     
     for j = 0, sizeX, 1 do
