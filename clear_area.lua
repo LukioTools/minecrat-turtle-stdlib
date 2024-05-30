@@ -34,11 +34,13 @@ for i = 1, sizeY, 3 do
 
             end
             while not Forward(1) do
+                print("mining until is able to go forward")
                 Dig(Hand)
             end
         end
         moveTo({j,i,0})
         while GetFuelLevel() < 10 do
+            print("trying to fuel up until fuel is present")
             AutoRefuel(16, 10)
         end
     end

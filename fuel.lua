@@ -21,6 +21,7 @@ function AutoRefuel(slots, fuelAmount)
     local success = false
     if fuelAmount then
         for i = 1, slots, 1 do
+            SelectSlot(i)
             local wasAble = turtle.refuel(fuelAmount)
             if wasAble then
                 success = true
@@ -29,6 +30,7 @@ function AutoRefuel(slots, fuelAmount)
         end
     else
         for i = 1, slots, 1 do
+            SelectSlot(i)
             local wasAble = turtle.refuel()
             if wasAble then
                 success = true
