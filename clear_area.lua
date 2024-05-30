@@ -28,7 +28,7 @@ for i = 1, sizeY, 3 do
                 local currentRotation = Direction()
                 moveTo()
                 SetRotation(3)
-                TransferAll()
+                TransferAll(16)
                 moveTo(currentPos)
                 SetRotation(currentRotation)
 
