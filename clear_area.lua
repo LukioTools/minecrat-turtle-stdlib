@@ -20,11 +20,10 @@ for i = 1, sizeY, 3 do
         Dig(Hand)
         SetRotation(1)
         for k = 0, sizeZ, 1 do
-            local isFull = false
-            if not Dig(Hand) then isFull = true end 
-            if not DigUp(Hand) then isFull = true end
-            if not DigDown(Hand) then isFull = true end
-            if isFull then
+            Dig(Hand) 
+            DigUp(Hand) 
+            DigDown(Hand)
+            if IsFullInventory(16) then
                 local currentPos = Position()
                 local currentRotation = Direction()
                 moveTo()

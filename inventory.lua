@@ -58,3 +58,15 @@ function GetItemDetail(slot)
     return detail
 end
 
+function IsFullInventory(slots)
+    local usedSlots = 0 
+    for i = 1, slots, 1 do
+        if GetItemCount(i) > 0 then
+            usedSlots = usedSlots + 1
+        end 
+    end
+    if usedSlots == slots then
+        return true
+    end
+    return false
+end
