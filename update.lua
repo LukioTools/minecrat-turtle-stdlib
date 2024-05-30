@@ -42,6 +42,9 @@ local urls = {
     },
     {
         filename="clear_area.lua"
+    },
+    {
+        filename="transfer.lua"
     }
 }
 
