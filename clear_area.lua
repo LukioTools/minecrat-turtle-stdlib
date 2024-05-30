@@ -33,7 +33,9 @@ for i = 1, sizeY, 3 do
                 SetRotation(currentRotation)
 
             end
-            Forward(1)
+            while not Forward(1) do
+                Dig(Hand)
+            end
         end
         moveTo({j,i,0})
         while GetFuelLevel() < 10 do
