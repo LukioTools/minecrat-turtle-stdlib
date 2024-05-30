@@ -8,9 +8,12 @@ function TransferTo(slot, quantity)
     
 end
 
-function TransferAll(slots)
+function TransferAll(slots, refuel)
     for i = 1, slots, 1 do
         SelectSlot(i)
+        if refuel then
+            Refuel()
+        end
         Drop()
     end
 end
