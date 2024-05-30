@@ -1,5 +1,5 @@
 require "stdlib"
-
+Hand = "right"
 
 Targ = {...}
 
@@ -17,11 +17,23 @@ end
 for i = 1, sizeY, 3 do     
     for j = 0, sizeX, 1 do
         moveTo({j,i,0})
+        Dig(Hand)
         SetRotation(1)
         for k = 0, sizeZ, 1 do
-            Dig("right") 
-            DigUp("right")
-            DigDown("right")
+            local isFull = false
+            if ~Dig(Hand) then isFull = true end 
+            if ~DigUp(Hand) then isFull = true end
+            if ~DigDown(Hand) then isFull = true end
+            if isFull then
+                local currentPos = Position()
+                local currentRotation = Direction()
+                moveTo()
+                SetRotation(3)
+                TransferAll()
+                moveTo(currentPos)
+                SetRotation(currentRotation)
+
+            end
             Forward(1)
         end
         moveTo({j,i,0})

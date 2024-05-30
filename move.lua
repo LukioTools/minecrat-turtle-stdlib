@@ -176,6 +176,9 @@ end
 function GetDirection()
     return dir;
 end
+function Direction()
+    return dir
+end
 
 function SetRotation(d)
     if d == nil then d = 1; end
