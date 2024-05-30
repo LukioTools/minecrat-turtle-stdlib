@@ -21,9 +21,9 @@ for i = 1, sizeY, 3 do
         SetRotation(1)
         for k = 0, sizeZ, 1 do
             local isFull = false
-            if ~Dig(Hand) then isFull = true end 
-            if ~DigUp(Hand) then isFull = true end
-            if ~DigDown(Hand) then isFull = true end
+            if not Dig(Hand) then isFull = true end 
+            if not DigUp(Hand) then isFull = true end
+            if not DigDown(Hand) then isFull = true end
             if isFull then
                 local currentPos = Position()
                 local currentRotation = Direction()
