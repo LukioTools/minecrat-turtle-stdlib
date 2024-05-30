@@ -15,5 +15,6 @@ while PositionXYZ().z < iMaxLenght do
     Forward(1)
     print(PositionXYZ())
     while DigUp() do end
+    while DigDown() do end
 end
 
