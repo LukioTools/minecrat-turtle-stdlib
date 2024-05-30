@@ -10,6 +10,7 @@ end
 
 function TransferAll(slots)
     for i = 1, slots, 1 do
-        turtle.transferTo(i)
+        SelectSlot(i)
+        Drop()
     end
 end
