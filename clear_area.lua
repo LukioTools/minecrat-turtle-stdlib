@@ -1,6 +1,16 @@
 require "stdlib"
 Hand = "right"
 
+function EmptyInventoryToChest()
+    local currentPos = Position()
+    local currentRotation = Direction()
+    moveTo()
+    SetRotation(3)
+    TransferAll(16, true)
+    moveTo(currentPos)
+    SetRotation(currentRotation)
+end
+
 Targ = {...}
 
 local sizeX = tonumber(Targ[1])
@@ -16,22 +26,17 @@ end
 
 for i = 1, sizeY, 3 do     
     for j = 0, sizeX, 1 do
+        SetRotation(2)
+        Dig(hand)
         moveTo({j,i,0})
-        Dig(Hand)
         SetRotation(1)
         for k = 0, sizeZ, 1 do
             Dig(Hand) 
             DigUp(Hand) 
             DigDown(Hand)
             if IsFullInventory(16) then
-                local currentPos = Position()
-                local currentRotation = Direction()
-                moveTo()
-                SetRotation(3)
-                TransferAll(16)
-                moveTo(currentPos)
-                SetRotation(currentRotation)
-
+                print("Returning to home to unload shit")
+                EmptyInventoryToChest()
             end
             while not Forward(1) do
                 print("mining until is able to go forward")
