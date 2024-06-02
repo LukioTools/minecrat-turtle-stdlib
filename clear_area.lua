@@ -26,9 +26,9 @@ end
 
 for i = 1, sizeY, 3 do     
     for j = 0, sizeX, 1 do
-        print(Position())
+        print(Position()[1], Position()[2], Position()[3])
         moveTo({j,i,0})
-        print(Position())
+        print(Position()[1], Position()[2], Position()[3])
         SetRotation(2)
         Dig(hand)
         SetRotation(1)
