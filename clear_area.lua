@@ -26,9 +26,9 @@ end
 
 for i = 1, sizeY, 3 do     
     for j = 0, sizeX, 1 do
+        moveTo({j,i,0})
         SetRotation(2)
         Dig(hand)
-        moveTo({j,i,0})
         SetRotation(1)
         for k = 0, sizeZ, 1 do
             Dig(Hand) 
