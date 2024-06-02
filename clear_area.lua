@@ -26,6 +26,7 @@ end
 
 for i = 1, sizeY, 3 do     
     for j = 0, sizeX, 1 do
+        AutoRefuel(16, 64)
         moveTo({j,i,0})
         SetRotation(2)
         Dig(hand)
